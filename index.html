@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HBD Noe Noe</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="module" src="confetti.js"></script>
-  </head>
-  <body>
-    <audio id="song" >
-        <source src="music.mp3">
-    </audio>
     <script>
-        window.addEventListener('click',()=>{
+        window.addEventListener('mouseover',()=>{
             document.getElementById("song").play();
         })
     </script>
-    <button id="btn" style="display: none;">Click me</button>
+  </head>
+  <body>
+    <div id="confetti-container">
+    </div>
+    <audio id="song" >
+        <source src="music.mp3">
+    </audio>
     <div class="card">
       <div class="back"></div>
       <div class="front">
@@ -56,6 +56,9 @@
           <div>ဆက်ပိုင်</div>
         </div>
       </div>
+      <div class="instruction">Click Postcard cover</div>
     </div>
+    
+    <script src="confetti.js"></script>
   </body>
 </html>

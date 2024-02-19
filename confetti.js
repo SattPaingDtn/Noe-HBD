@@ -1,8 +1,16 @@
-import confetti from "https://cdn.skypack.dev/canvas-confetti";
+const confettiContainer = document.querySelector("#confetti-container");
+const showConfetti = () => {
+  const confetti = document.createElement("div");
+  confetti.textContent = "🎂";
+  confetti.classList.add("confetti");
+  confetti.style.left = Math.random() * innerWidth + "px";
+  confettiContainer.appendChild(confetti);
 
-function makeConfetti() {
-  confetti();
-}
+  setTimeout(() => {
+    confetti.remove();
+  }, 5000);
+};
 
-const btn = document.getElementById("btn");
-btn.addEventListener("click", makeConfetti);
+setInterval(() => {
+  showConfetti();
+}, 200);
