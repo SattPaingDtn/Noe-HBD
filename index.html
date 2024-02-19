@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HBD Noe Noe</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/typed.min.js"></script>
-    <script src="js/script.js"></script>
   </head>
   <body>
-    <audio class="song" controls loop>
+    <audio id="song">
         <source src="music.mp3">
-        </source>
-        Your browser isn't invited for super fun audio time.
     </audio>
+    <script>
+        window.addEventListener('click',()=>{
+            document.getElementById("song").play();
+        })
+    </script>
     <div class="card">
       <div class="back"></div>
       <div class="front">
